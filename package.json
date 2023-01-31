@@ -1,0 +1,15 @@
+{
+  "name": "binary-vs-linear-search",
+  "scripts": {
+    "target:worst-case": "node --expose-gc --allow-natives-syntax --max-old-space-size=5120 src/target_worst-case.js",
+    "target:any": "node --expose-gc --allow-natives-syntax --max-old-space-size=5120 src/target_any.js",
+    "plot": "node src/plot.js",
+    "plot:main": "node src/plot.js -d data/target_worst-case.runs_15000.interval_25.items_0-600.json",
+    "plot:main:no_opt": "node src/plot.js -d data/target_worst-case.runs_15000.interval_10.items_0-200.no_optimizations.json",
+    "plot:multiple-targets": "node src/plot.js -d data/target_any.runs_15000.interval_25.items_0-15000.targets_10.json"
+  },
+  "dependencies": {
+    "command-line-args": "^5.2.1",
+    "nodeplotlib": "^1.1.2"
+  }
+}
